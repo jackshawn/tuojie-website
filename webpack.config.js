@@ -10,7 +10,7 @@ module.exports = {
         about: './js/about.js',
         joinus1: './js/joinus1.js',
         joinus2: './js/joinus2.js',
-        product: './js/product.js',
+        product: './js/product.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -63,7 +63,12 @@ module.exports = {
         rules: [{
             test: /\.scss$/,
             use: ExtractTextPlugin.extract({
-                use: ['css-loader', 'sass-loader']
+                use: [{
+	                loader: 'css-loader',
+	                options:{
+		                minimize: true //css压缩
+	                }
+                }, 'sass-loader']
             })
         }, {
             test: /\.(png|svg|jpg|gif)$/,
