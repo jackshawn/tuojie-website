@@ -1,0 +1,198 @@
+/* 页面宽度 */
+$width: 1160px;
+
+/* tuojie red */
+$red: #cc213c;
+
+/* 清除浮动 */
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both
+}
+
+@mixin center {
+    width: $width;
+    margin: 0 auto;
+}
+/* 头部 */
+.head {
+    @include center;
+}
+
+/* banner bg */
+.banner-wrap {
+    width: 100%;
+    min-width: $width;
+    height: 452px;
+    position: relative;
+    overflow: hidden;
+
+    .banner {
+        width: 1920px;
+        height: 452px;
+        position: absolute;
+        left: 50%;
+        margin-left: -960px;
+    }
+}
+
+/* banner navigation */
+.nav-active {
+    background: $red !important;
+}
+
+.nav {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    z-index: 3;
+    width: 712px;
+    height: 40px;
+    margin-left: -342px;
+    font-size: 14px;
+    line-height: 40px;
+
+    .nav-list {
+        display: inline-block;
+        width: 114px;
+        height: 40px;
+        text-align: center;
+        background: rgba(0,0,0,.3);
+        color: #fff;
+        border-radius: 5px;
+        transform: skewX(340deg);
+
+        &:hover {
+            height: 37px;
+            border-bottom: 3px solid $red;
+        }
+
+        a {
+            display: inline-block;
+            transform: skewX(20deg);
+            color: #fff;
+            &:hover {
+                cursor: pointer;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .nav-content {
+        position: relative;
+        display: inline-block;
+        width: 114px;
+        height: 40px;
+
+        &:hover .nav-child{
+            display: block;
+        }
+
+        .nav-head {
+            width: 114px;
+            height: 40px;
+            background: rgba(0,0,0,.3);
+            color: #fff;
+            border-radius: 5px;
+            display: inline-block;
+            transform: skewX(340deg);
+            text-align: center;
+            
+            &:hover {
+                height: 37px;
+                border-bottom: 3px solid $red;
+                cursor: default;
+            }
+            span,
+            a {
+                display: inline-block;
+                transform: skewX(20deg);
+                color: #fff;
+                text-decoration: none;
+            }
+
+        }
+        .nav-child {
+            position: absolute;
+            left: -2px;
+            display: none;
+
+            a {
+                display: inline-block;                
+                width: 114px;
+                height: 40px;
+                margin-top: 5px;
+                text-align: center;
+                background: rgba(0,0,0,.3);
+                color: #fff;
+                border-radius: 5px;
+
+                &:hover {
+                    height: 37px;
+                    border-bottom: 3px solid $red;
+                    text-decoration: none;
+                }
+            }
+        }
+
+    }
+}
+
+/* 底部 */
+.foot {
+    height: 185px;
+    background: #717171;
+    min-width: $width;
+    
+    .foot-content {
+        @include center;
+
+        .foot-left {
+            width: 500px;
+            height: 131px;
+            margin-top: 25px;
+            float: left;
+            color: #fff;
+            margin-left: 30px;
+
+            .foot-menu {
+                font-size: 14px;
+                margin-top:15px;
+                margin-bottom: 20px;
+
+                a {
+                    color: #fff;
+                    display: inline-block;
+                    height: 14px;
+                    border-left: 2px solid #fff;
+                    padding: 0 5px 0 10px;
+
+                    &:first-child {
+                        border: none;
+                        padding-left: 0;
+                    }
+                }
+            }
+
+            .foot-address,
+            .foot-email,
+            .foot-copyright {
+                font-size: 14px;
+                line-height: 2em;
+
+                a {
+                    color: #fff;
+                }
+            }
+        }
+        .foot-right {
+            height: 131px;
+            margin-top: 25px;
+            margin-left: 45px;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "tuojie",
+  "version": "1.0.0",
+  "description": "tuojie website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tuojie": "webpack-dev-server --open",
+    "build": "webpack --color"
+  },
+  "author": "shawn",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.29.0",
+    "node-sass": "^4.5.2",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+  }
+}

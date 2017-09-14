@@ -1,0 +1,25 @@
+@import "common.scss";
+
+.about {
+    @include center;
+    
+    .about-title {
+        width: 327px;
+        margin: 0 auto;
+    }
+
+    .about-content {
+        margin: 30px 80px;
+        color: #808080;
+        font-size: 16px;
+        line-height: 2.5em;
+
+        p {
+            text-indent: 2em;
+        }
+    }
+}
+
+.honor {
+    @include center
+}

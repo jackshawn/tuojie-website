@@ -1,0 +1,80 @@
+@import "common.scss";
+
+.joinus-title {
+    @include center;
+    height: 4px;
+    position: relative;
+    background: $red;
+    margin: 72px auto;
+
+    .left-dot,
+    .right-dot {
+        width: 16px;
+        height: 16px;
+        border-radius: 8px;
+
+        position: absolute;
+        top: -6px;
+        background: $red;
+    }
+
+    .right-dot {
+        right: 0
+    }
+
+    .title-content {
+        width: 400px;
+        height: 90px;
+        border-radius: 10px;
+        box-shadow: #ccc 0 0 4px 4px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -45px;
+        margin-left: -200px;
+        background: #fff;
+
+        font-size: 32px;
+        line-height: 90px;
+        color: $red;
+        text-align: center;
+    }
+}
+
+.joinus2 {
+    @include center;
+    color: #565656;
+
+
+    .job-content {
+        float: left;
+        width: 520px;
+        padding: 0 20px;
+        margin-bottom: 40px;
+
+        .job-name {
+            font-size: 24px;
+            line-height: 2em;
+            font-weight: bold;
+        }
+        .job-detail {
+            font-size: 16px;
+            line-height: 2em;
+            white-space: pre-line
+        }
+
+    }
+
+}
+
+.job-tip {
+    @include center;
+    font-size: 24px;
+    line-height: 1.5em;
+    color: $red;
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+

@@ -1,0 +1,98 @@
+@import "common.scss";
+
+/* title color */
+$c1: #02a0e9;
+$c2: #ea5513;
+$c3: #0ca19a;
+$c4: #f39801;
+$c5: #c40e25;
+
+.joinus {
+    @include center;
+    font-size: 16px;
+    line-height: 2em;
+    color: #565656;
+
+    .joinus-logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .joinus-title1,
+    .joinus-title2,
+    .joinus-title3,
+    .joinus-title4,
+    .joinus-title5 {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 2em;
+        color: $c1;
+        
+        .joinus-number {
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            margin-top: -5px;
+            margin-left: 30px;
+
+            font-size: 20px;
+            font-weight: normal;
+            line-height: 2em;
+            text-align: center;
+            border-radius: 20px;
+
+            color: #fff;
+            background: $c1;
+        }
+    }
+
+    .joinus-title2 {
+        color: $c2;
+        .joinus-number {
+            background: $c2;
+        }
+    }
+    .joinus-title3 {
+        color: $c3;
+        .joinus-number {
+            background: $c3;
+        }
+    }
+    .joinus-title4 {
+        color: $c4;
+        .joinus-number {
+            background: $c4;
+        }
+    }
+    .joinus-title5 {
+        color: $c5;
+        .joinus-number {
+            background: $c5;
+        }
+    }
+
+    .joinus-text {
+        text-align: center;
+        font-size: 32px;
+        line-height: 1.5em;
+        font-weight: bold;
+        color: $c1;
+    }
+    .joinus-img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .joinus-content{
+        padding: 0 80px 20px;
+    }
+    .joinus-list {
+        padding: 0 100px;
+
+        li {
+            text-indent: 1em;
+        }
+    }
+
+}
+

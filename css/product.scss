@@ -1,0 +1,177 @@
+@import "common.scss";
+
+.tab-wrap {
+    @include center;
+
+    height: 260px;
+    border-bottom: 4px solid $red;
+    margin-top: 40px;
+
+    .tab {
+        position: relative;
+        float: left;
+        width: 222px;
+        height: 222px;
+        background: #727172;
+        color: #fff;
+        border-radius: 10px;
+
+        margin-left: 110px;
+        cursor: pointer;
+
+        img {
+            display: block;
+            margin: 40px auto 20px;
+        }
+
+        p {
+            width: 222px;
+            font-size: 14px;
+            text-align: center;
+            line-height: 1.5em;
+
+            position: absolute;
+            bottom: 20px;
+        }
+
+        .tab-arrow {
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+            // border-bottom-color: $red;
+
+            position: absolute;
+            left: 50%;
+            bottom: -40px;
+            margin-left: -10px;
+        }
+
+        .arrow-active {
+            border-bottom-color: $red;
+        }
+    }
+
+    .tab-active {
+        background: $red;
+    }
+}
+
+.panel-wrap {
+    @include center;
+
+    .panel {
+        display: none;
+
+        .panel-title {
+            font-size: 20px;
+            text-align: center;
+            line-height: 2.5em;
+            //text-indent: 2em;
+            color: #898989;
+
+            .back-btn {
+                cursor: pointer;
+            }
+            .back-btn:hover {
+                font-weight: bold;
+                color: $red;
+            }
+        }
+
+        .panel-subject {
+            font-size: 18px;
+            line-height: 2.5em;
+            text-indent: 8em;
+            color: $red;
+        }
+
+        /* star product */
+        .panel-product {
+            position: relative;
+            float: left;
+            width: 340px;
+            height: 340px;
+            background: #f7f7f7;
+            margin: 20px;
+
+            cursor: pointer;
+            overflow: hidden;
+
+            &:hover .product-wrap {
+                bottom: 0;
+                .product-name{
+                    padding-left: 40px;
+                }
+            }
+
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+
+            .product-wrap {
+                position: absolute;
+                bottom: -105px;
+
+                width: 340px;
+                height: 170px;
+
+                color: #666;
+                background: rgba(210, 210, 210, .7);
+
+                transition: all 1s ease;
+
+                .product-name {
+                    // text-align: center;
+                    font-size: 24px;
+                    font-weight: bold;
+                    line-height: 64px;
+
+                    padding-left: 130px;
+
+                    transition: all .8s ease;                    
+                }
+
+                .product-info {
+                    font-size: 14px;
+                    line-height: 1.5em;
+                    text-indent: 2em;
+
+                    padding: 0 10px;
+                }
+
+
+            }
+        }
+
+        /* suit case */
+
+        .panel-detail {
+            font-size: 14px;
+            line-height: 2.5em;
+            text-indent: 2em;
+            color: #898989;
+            padding: 0 120px;
+
+            .panel-detail-arrow {
+                width: 10px;
+                height: 10px;
+
+            }
+        }
+
+        .panel-img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .product-detail {
+            display: none;
+        }
+    }
+
+    .panel-active,
+    .product-active {
+        display: block !important;
+    }
+}
